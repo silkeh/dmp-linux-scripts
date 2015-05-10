@@ -1,0 +1,12 @@
+[Unit]
+Description=DarkMultiPlayer %I Server
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/mono /opt/dmp/%I/DMPServer.exe
+Type=forking
+User=jebediah
+Group=jebediah
+
+[Install]
+WantedBy=multi-user.target

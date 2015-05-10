@@ -1,18 +1,13 @@
 [Unit]
-Description=DarkMultiPlayer %I Server
+Description=DarkMultiPlayer %I Server (in screen)
+After=network.target
 
 [Service]
-ExecStart=/usr/bin/mono /opt/dmp/%I/DMPServer.exe
-ExecStop=/bin/echo '/shutdown' > /opt/dmp/%I/server.fifo
-Type=simple
+ExecStart=/usr/bin/screen -dmS dmp-%I /usr/bin/mono /opt/dmp/%I/DMPServer.exe
+ExecStop=/usr/bin/screen -S dmp-%I -X stuff "/shutdown\r"; /bin/sleep 5
+Type=forking
 User=jebediah
 Group=jebediah
-;StandardInput=socket
-
-;[Socket]
-;ListenFIFO=/opt/dmp/%I/server.fifo
-;SocketMode=0660
 
 [Install]
 WantedBy=multi-user.target
-DefaultInstance=career
