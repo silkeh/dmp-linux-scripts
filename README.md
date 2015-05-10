@@ -90,8 +90,8 @@ To enter the screen directly, a script is included:
 
 To detach, use `crtl+A D`
 
-Updating the server
--------------------
+Updating
+========
 Updating the server works exactly the same as installing it.
 
     sudo ./server-create.sh career
