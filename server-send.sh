@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ -z "$1" ]; then
-  echo "create-server.sh [path] [message/command]"
+  echo "server-send.sh [servername] [message/command]"
   exit 0
 fi
 

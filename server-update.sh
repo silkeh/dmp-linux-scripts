@@ -1,10 +1,10 @@
 #!/bin/sh
 
 if [ -z "$1" ]; then
-  echo "create-server.sh [path]"
+  echo "server-update.sh [servername]"
   exit 0
 fi
 
-systemctl stop "dmp@$1"
+systemctl stop "dmp-screen@$1"
 ./server-create.sh "/opt/dmp/$1"
-systemctl start "dmp@$1"
+systemctl start "dmp-screen@$1"

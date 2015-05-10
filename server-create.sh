@@ -1,8 +1,9 @@
 #!/bin/sh
 if [ -z "$1" ]; then
-  echo "create-server.sh [path]"
+  echo "server-create.sh [path]"
   exit 0
 fi
+
 /bin/mkdir -p "$1"
 echo "Downloading DMPUpdater"
 curl -so "$1/DMPUpdater.exe" http://godarklight.kerbalcentral.com/dmp/downloads/dmpupdater/DMPUpdater.exe
