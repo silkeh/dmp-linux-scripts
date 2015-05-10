@@ -3,10 +3,10 @@ Introduction
 This is a collections of scripts that make the running of a [DarkMultiPlayer](https://github.com/godarklight/DarkMultiPlayer)
 server more convenient.
 
-The scripts include integration with systemd, but can also be run without.
+The scripts include integration with *systemd*, but can also be run without.
 
-These instructions assume you want to run a server named `career`,
-installed in `/opt/dmp/career/` as user `jebediah`.
+These instructions assume you want to run a server named *career*,
+installed in `/opt/dmp/career/` as user *jebediah*.
 The folder and user can be configured in each file separately.
 
 Installation
@@ -37,7 +37,7 @@ Two services are included:
 
 These commands can be substituded for one another in the instructions below.
 
-To start the previously described `career` server:
+To start the previously described *career* server:
 
     sudo systemctl start dmp@career
 
@@ -51,13 +51,13 @@ You can enable a server at boot with:
 
 Running without systemd
 -----------------------
-The commands that run (for a server named `career`) are:
+The commands that run (for a server named *career*) are:
 
     /usr/bin/mono /opt/dmp/career/DMPServer.exe
 
-To stop it, the `mono` process needs to be killed.
+To stop it, the *mono* process needs to be killed.
 
-And, for the screen session
+To tun the service inside a screen:
 
     /usr/bin/screen -dmS dmp-career /usr/bin/mono /opt/dmp/career/DMPServer.exe
 
@@ -65,7 +65,7 @@ And to stop the screen session:
 
     sudo ./server-send.sh career /shutdown
 
-To let `jebediah` run these commands at boot, add them to his crontab using an `@reboot` line.
+To let *jebediah* run these commands at boot, add them to his crontab using an `@reboot` line.
 
 Interacting with a server in a screen
 =====================================
@@ -86,10 +86,9 @@ Attaching
 ---------
 To enter the screen directly, a script is included:
 
-   ./server-attach.sh career
+    ./server-attach.sh career
 
 To detach, use `crtl+A D`
-
 
 Updating the server
 -------------------
