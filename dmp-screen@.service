@@ -1,0 +1,13 @@
+[Unit]
+Description=DarkMultiPlayer %I Server (in screen)
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/screen -dmS dmp-%I /usr/bin/mono /opt/dmp/%I/DMPServer.exe
+ExecStop=/usr/bin/screen -S dmp-%I -X stuff "/shutdown\r"; /bin/sleep 5
+Type=forking
+User=jebediah
+Group=jebediah
+
+[Install]
+WantedBy=multi-user.target
