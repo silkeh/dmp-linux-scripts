@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 ExecStart=/usr/bin/mono /opt/dmp/%I/DMPServer.exe
-Type=forking
+Type=simple
 User=jebediah
 Group=jebediah
 

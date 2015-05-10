@@ -25,10 +25,13 @@ A script to send commands is included, it works as follows:
 
     ./server-send.sh career /help
 
-(this needs to be run as root, or the user the server runs as)
+This only works when the server is run using the `dmp-screen@.service`.
+It also needs to be run as root, or the user the server runs as.
 
 Updating the server
 ===================
-Updating the server works exactly the same as installing it:
+Updating the server works exactly the same as installing it.
+But for convenience a script is included that also stops the service:
 
-    sudo ./server-create.sh /opt/dmp/career
+    sudo ./server-update.sh career
+
