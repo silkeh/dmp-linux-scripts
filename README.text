@@ -9,7 +9,7 @@ Copy the service files to the `systemd` services folder:
 
 Create the DarkMultiPlayer base config:
 
-    sudo ./create-server.sh /opt/dmp/career
+    sudo ./server-create.sh /opt/dmp/career
 
 Now the server is ready, to run it use:
 
@@ -23,7 +23,7 @@ Sending commands
 ================
 A script to send commands is included, it works as follows:
 
-    ./dmp-send.sh career /help
+    ./server-send.sh career /help
 
 (this needs to be run as root, or the user the server runs as)
 
@@ -31,4 +31,4 @@ Updating the server
 ===================
 Updating the server works exactly the same as installing it:
 
-    sudo ./create-server.sh /opt/dmp/career
+    sudo ./server-create.sh /opt/dmp/career
