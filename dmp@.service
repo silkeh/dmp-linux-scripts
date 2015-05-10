@@ -1,0 +1,18 @@
+[Unit]
+Description=DarkMultiPlayer %I Server
+
+[Service]
+ExecStart=/usr/bin/mono /opt/dmp/%I/DMPServer.exe
+ExecStop=/bin/echo '/shutdown' > /opt/dmp/%I/server.fifo
+Type=simple
+User=jebediah
+Group=jebediah
+;StandardInput=socket
+
+;[Socket]
+;ListenFIFO=/opt/dmp/%I/server.fifo
+;SocketMode=0660
+
+[Install]
+WantedBy=multi-user.target
+DefaultInstance=career
