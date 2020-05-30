@@ -11,9 +11,9 @@ The folder and user can be configured in each file separately.
 
 Installation
 ============
-Make sure to install the dependencies. On Debian 8 this can be done with:
+Make sure to install the dependencies. On Debian 10 this can be done with:
 
-    sudo apt-get install mono-runtime libmono-system-core4.0-cil
+    sudo apt-get install mono-runtime libmono-system-core4.0-cil libmono-system-runtime-serialization4.0-cil
 
 Copy the service files to the `systemd` services folder:
 
